@@ -1,0 +1,97 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+}
+
+body {
+  text-align: center;
+  background: #00b3b3;
+}
+
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  cursor: pointer;
+  width: 100%;
+  max-width: 360px;
+  margin: 10px 10px 20px;
+  padding: 10px;
+  background: rgba(245, 245, 245, 0.9);
+  border-radius: .75em;
+  border: 2px solid #006666;
+  box-shadow: 5px 5px #009999;
+  transition: .4s ease-out;
+  overflow: hidden;
+}
+
+.card-img {
+  width: 95px;
+  margin: 10px 15px auto 10px;
+  border-radius: 50%;
+}
+
+.card-info-container {
+  text-align: left;
+}
+
+.card-name {
+  margin: 20px auto 0;
+}
+
+.card-text {
+  font-size: 0.8em;
+  color: rgba(50, 50, 50, 0.7);
+  margin: 7px auto;
+  transition: .4s ease-out;
+}
+
+.cap {
+  text-transform: capitalize;
+}
+
+
+
+@media (min-width: 1024px) {
+
+  .card:hover {
+      background: rgba(255, 255, 255, 1);
+      border: 3px solid #006666;
+  }
+
+  .card:hover .card-text {
+      color: #006666;
+      font-size: .93em;
+  }
+
+  .btn:hover {
+      background: rgba(0, 153, 153, .3);
+      color: rgba(0, 153, 153, 1);
+  }
+
+  .btn[disabled]:hover {
+      background: #009999;
+      color: #009999;
+  }
+}
